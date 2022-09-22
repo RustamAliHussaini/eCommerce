@@ -36,12 +36,6 @@
 
 <script>
 
-$(document).ready(function(){
-    $("button").click(function(){
-        alert("All is set.");
-    })
-})
-
 </script>
 
 <style>
