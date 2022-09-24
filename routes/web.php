@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use Illuminate\Contracts\Session\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +20,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/logout', function(){
+    if(Session()->has('user')){
+        Session()->pull('user');
+
+    }
+    return redirect('login');
+});
+
 Route::get('login', function () {
-    return view('login');
+    if(Session()->has('user')){
+        return redirect('product');
+    }else{
+        return view('login');
+    }
 });
 
 Route::post('login',[UserController::class,'login']);
 Route::get('product', [ProductController::class,'index']);
+Route::get('detail/{id}',[ProductController::class,'detail']);
+Route::get('/search',[ProductController::class,'search']);

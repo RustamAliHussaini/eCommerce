@@ -43,6 +43,36 @@
         height: 500px;
         padding-top: 200px;
     }
+    img.slider-img{
+        height: 450px !important;
+        width: 100%;
+    }
+    .custom-product{
+        height: 550px !important;
+    }
+    .slider-text{
+        background-color: #0000005c;
+    }
+    img.trending-img{
+        height: 100px !important;
+    }
+    .trending-wrapper{
+        margin:30px;
+    }
+    .trending-content{
+        float: left;
+        width: 20%;
+
+    }
+    .detail-img{
+        height: 300px;
+        width: 100%;
+    }
+    .search-img{
+        height: 150px;
+        width: 300px;
+
+    }
 </style>
 
 
