@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\cart;
+use Illuminate\Contracts\Session\Session;
 
 class ProductController extends Controller
 {
@@ -22,5 +24,24 @@ class ProductController extends Controller
     function search(Request  $req){
          $data = Product::where('name','like','%'.$req->input('query').'%')->get();
          return view('search',['product'=>$data]);
+    }
+    function adToCart(Request $req){
+
+        if($req->Session()->has('user')){
+            $cart = new cart;
+            $cart->user_id=$req->Session()->get('user')['id'];
+            $cart->product_id=$req->product_id;
+            $cart->save();
+            return redirect('product');
+
+
+        }else{
+            return redirect('login');
+        }
+
+    }
+    static function cartItem(){
+        $userID = Session()->get('user')['id'];
+        return  cart::where('user_id',$userID)->count();
     }
 }

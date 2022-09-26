@@ -40,3 +40,4 @@ Route::post('login',[UserController::class,'login']);
 Route::get('product', [ProductController::class,'index']);
 Route::get('detail/{id}',[ProductController::class,'detail']);
 Route::get('/search',[ProductController::class,'search']);
+Route::post('adToCart',[ProductController::class,'adToCart']);
