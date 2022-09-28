@@ -1,12 +1,12 @@
+<div style=" padding-top:200px;" class="row">
 <footer>
-    <div style="padding-top:20px; margin-top:100px;" class="row">
+    <div  class="row footer">
 
-        <div class="container clear">
-            <div class="footer text-center">
-                <h3>Footer</h3>
-            </div>
+        <div class="container  clear">
+          <h1>All rights are reserved &copy;</h1>
         </div>
 
     </div>
 
 </footer>
+</div>

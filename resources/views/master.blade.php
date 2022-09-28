@@ -72,6 +72,30 @@
         height: 150px;
         width: 300px;
 
+
+    }
+    .cart-img{
+        height: 300 px;
+        width: 150px;
+    }
+    .cart_item{
+        border-bottom: 1px solid rgb(212, 206, 206) !important;
+        margin-bottom: 20px !important;
+        padding-bottom: 20px;
+    }
+    .header-nav ul li{
+        padding: 0 20px 0px 20px;
+    }
+    .footer{
+        height: 100px;
+        background-color:  #adb5bd63;
+        text-align: center;
+        font-size: 40px;
+        color: black;
+    }
+    .footer h1{
+        padding: 20px;
+    }
     }
 </style>
 
